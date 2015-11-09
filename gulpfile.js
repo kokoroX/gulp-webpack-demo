@@ -27,6 +27,7 @@ gulp.task('serve', ['sass', 'html'], function() {
 
     gulp.watch(globs.html, ['html']);   // html文件变动触发html
     gulp.watch(globs.sass, ['sass']);   // scss文件变动触发sass
+    gulp.watch(globs.assets, ['assets']);   // 资源文件变动触发assets
     gulp.watch(globs.js, ['js']);   // js文件变动触发js
     gulp.watch("frontend/*.html").on('change', browserSync.reload); // frontend/*.html变动触发browserSync.reload
 });
